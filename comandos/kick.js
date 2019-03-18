@@ -28,9 +28,12 @@ module.exports.run = async (bot, message, args) => {
     .setTimestamp(message.createdAt)
     .setFooter(`${message.author.username} kickou ${kUser.displayName}`, message.author.avatarURL);
 
+    let kickchannel = message.guild.channels.find(`name`, "⛔┆banimentos");
+    if(!kickchannel) return message.channel.send ("Nao foi possivel encontrar esta sala!")
+
     message.guild.member(kUser).kick(kReason)
     message.delete().catch(O_o=>{});
-    message.channel.send(kickEmbed)
+    kickchannel.send(kickEmbed)
 
     return;
 

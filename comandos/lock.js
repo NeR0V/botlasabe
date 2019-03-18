@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
 
           let lock = new Discord.RichEmbed()
           .setColor("#ff0000")
-          .addField("Chat Bloqueado", `O chat foi bloqueado por ${message.author}. Para desbloquear use s!unlock`)
+          .addField("Chat Bloqueado", `O chat foi bloqueado por ${message.author}. Para desbloqueart use s!unlock`)
           .setTimestamp(message.createdAt)
           .setFooter(`Lock feito por ${message.author.username}`, message.author.displayAvatarURL);
 

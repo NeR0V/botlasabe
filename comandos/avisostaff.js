@@ -62,7 +62,7 @@ module.exports.run = async (bot, message, args) => {
 
                 message.author.send(mandando).then(msg => msg.delete(5000))
 
-              message.guild.roles.get('553898574635859979').members.map(member => {
+              message.guild.roles.get('557026862979743773').members.map(member => {
                   member.send(embed)
               })
 
